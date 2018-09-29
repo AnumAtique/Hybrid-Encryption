@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="div"></div>
+	<form  method="post" action="encrypt_file.php" enctype="multipart/form-data">
+		<input type="file" name="uploadFile"/><br>
+		<input type="text" name="key" id="key"/><br>
+		<select name="encryptiontype">
+			<option value="aes and 3des">Hybrid Encryption using AES and 3DES</option>
+			<option value="idea and 3des">Hybrid Encryption using IDEA and 3DES</option>
+			<option value="aes">AES Encryption</option>
+			<option value="3des">3DES Encryption</option>
+			<option value="blowfish">Blowfish</option>
+			<option value="idea">IDEA-OFB</option>
+		</select>
+		<input type="submit" name="submit" value="Encrypt"/>
+		<input type="submit" name="decrypt" value="Decrypt"/>
+	</form>
+	<script type="text/javascript">
+	document.getElementById('div').innerHTML ="<?php echo 'Anum Atique'; ?>";
+</script> 
+</body>
+</html>

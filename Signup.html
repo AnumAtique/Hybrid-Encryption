@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="Signup.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+</head>
+<body>
+	<div class="login-box">
+		<span id="signup">Sign Up</span><br>
+	<form method="post" action="./createSession.php" name="signupForm" onsubmit="return validate()">
+		<span class="text">Name</span><br>
+		<input type="text" name="name" id="name" class="fields" required="Required"/><br>
+		<span class="text">Email</span><br>
+		<input type="email" name="email" id="email" class="fields" required="Required"/><br>
+		<span class="text">Password</span><br>
+		<input type="password" name="password" id="password" class="fields" required="Required"/><br>
+		<span class="text">Confirm Password</span><br>
+		<input type="password" name="cpassword" id="cpassword" class="fields" required="Required"/><br>
+		<input type="submit" value="SignUp" id="submit" name="signup" class="fields"/>
+	</form>
+	<span class="fpass" id="anc"><a href="./login.html">Already have Account</a></span>
+</div>
+<script type="text/javascript">
+	function validate() {
+		var name = document.forms["signupForm"]["name"].value;
+		var email = document.forms["signupForm"]["email"].value;
+		var password = document.forms["signupForm"]["password"].value;
+		var checkPassword = document.forms["signupForm"]["cpassword"].value;
+
+		if(name.trim() != "" || email.trim() != "" || password.trim() != "" || checkPassword.trim() != "") {
+			if(password == checkPassword) {
+			alert(password+" "+checkPassword);
+				return true;
+			}
+			else {
+				$(document).ready(function() {
+				$("#cpassword").css({"border": "red 2px solid"});
+				});
+				return false;
+			}
+		}
+			else {
+			$(document).ready(function() {
+				$(".fields").css({"border": "red 2px solid"});
+				alert("not correct");
+			});
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

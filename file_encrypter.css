@@ -1,0 +1,47 @@
+body {
+	background: url("./images/background.png") rgba(255,255, 255, 0.1) no-repeat;
+	background-blend-mode: screen;
+	background-size: cover;
+}
+.login-box {
+margin-left: 32%;
+margin-top: 2%;
+width: 40%;
+height: 90%;
+padding-bottom: 5%;
+padding-top: 4%;
+background-color: rgba(0,0,0,0.5);
+border-radius: 10px;
+}
+.fields {
+	color: rgba(0,0,255, 0.9);
+	width: 51%;
+	padding: 1%;
+	margin-left: 24%;
+	margin-top: 1%;
+	margin-bottom: 6%;
+	border-radius: 9px;
+	border: 4% solid thick;
+	border-color: rgba(0,0,63, 0.6);
+	font-family: cursive;
+	font-size: 150%;
+}
+#submit {
+	background-color: rgba(0, 0, 63, 0.7);
+	font-family: cursive;
+	font: 150% bold;
+	font-weight: bold;
+	margin-top: 4%;
+	margin-left: 26%;
+	margin-bottom: 1%;
+	color: white;
+}
+.fpass {
+	font: 100% cursive;
+	margin-top: 0%;
+	margin-left: 36%;
+	color:white;
+}
+#signup {
+	margin-left: 45%;
+}
